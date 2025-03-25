@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contrat</title>
+
+        <hr size="6px" color="black">
+        <h2 style="text-align: center;">CONTRAT D'ENGAGEMMENT MARITIME<br>
+            A DURÉE INDÉTERMINÉ</h2>
+        <hr size="6px" color="black">
+        <h3 aling="center">ENTRE LES SOUSSIGNE</h3>   
+    </head>
+    <style>
+
+        body {
+            width: 90% ;
+            margin-left: 40px;
+        }
+        .marinClase {
+            font-size: 15;
+            font-style: italic;
+        }
+         .entrepriseClase {
+            font-size: 15;
+            font-style: italic;
+         }
+         .marinDateClaseI {
+            font-size: 15;
+            font-style: normal;
+        }
+        .marinDateClaseF {
+            font-size: 15;
+            font-style: normal;
+        }
+        input {
+                font-size: 15px;
+                outline: 0;
+                border: none;
+                border-bottom: rgb(167, 161, 161) 3px solid;
+                margin-top: 3px;
+              }   
+        p {
+            margin-top: 3px;
+            margin-bottom: 4px;
+            text-align: left;
+        }
+        .mibutton{
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            width: 15%;
+            text-align: center;
+            font-size: 15px;
+            border: 10px;
+            border-color: brown;
+            padding: 13px 20px;;
+        }
+        select {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-family: cursive, sans-serif;
+        outline: 0;
+        color: #0c0c0c;
+        border: none;
+        padding: 4px;
+      }
+    </style>
+    <body>
+        <div>
+        <table >
+            <tr>
+                <td>
+                    <label>L'entreprise:</label>
+                    <input type="text" id="nombreEntreprise" oninput="MostrarNombreEntreprise()" onblur="QuitarBorde('nombreEntreprise')"/> 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label>Adesse:</label>
+                    <input type="text" id="adresse"onblur="QuitarBorde('adresse')"/> 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label>SIRET:</label>
+                    <input type="text"   id="Siret" onblur="QuitarBorde('Siret')"/> 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label>Nom(s) du ou des Navieres:</label>
+                    <input type="text" id="nombreNaviere" oninput="MostrarNombreNaviere()" onblur="QuitarBorde('nombreNaviere')"/> 
+                </td>
+            </tr> 
+            <tr>
+                <td></td>
+                <td>
+                    <label>Numéro(s) d'immatriculation:</label>
+                    <input type="text" id ="matricula" onblur="QuitarBorde('matricula')"/> 
+                </td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td>
+                    <label>Armé en pêche au large:</label>
+                    <input type="text" id ="armedePeche" onblur="QuitarBorde('armedePeche')"/>
+                </td>
+            </tr>  
+        </table>
+
+        <p>
+        Agissant par l'intermediaire de son représentant légal,
+        <select name="sexo" id="sexo2" required  style="width: 100px;">
+            <option value="Mme">Madame</option>
+            <option value="M."  selected>Monsieur</option>
+        </select>
+        <input type="text" id ="representant" oninput="MostrarRepresentant()" onblur="QuitarBorde('representant')"/>
+        </p>
+        <h3>D'UNE PART,</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <label>Le marin, Monsieur:</label>
+                    <input type="text" id="nombreMarin" oninput="MostrarNombreMarin()" onblur="QuitarBorde('nombreMarin')"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label>Né le:</label>
+                    <input type="date" id="Nele" onblur="QuitarBorde('Nele')"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label>Nº de sécurité sociale:</label>
+                    <input type="text" id="Nss" onblur="QuitarBorde('Nss')"/> 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label>Nationalité:</label>
+                    <input type="text" id="Nationalite" onblur="QuitarBorde('Nationalite')"/>
+                </td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td>
+                    <label>Demeurant:</label>
+                    <input type="text" id="Demeurant" onblur="QuitarBorde('Demeurant')"/> 
+                </td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td>
+                    <label>Numéro matricule:</label>
+                    <input type="text" id="Nmatricule" onblur="QuitarBorde('Nmatricule')"/> 
+                </td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td>
+                    <label>Visa nº:</label>
+                    <input type="text" size="20" id="VisaN" onblur="QuitarBorde('VisaN')"/> 
+                    <label>valide du:</label>
+                    <input type="date" id="VisaDateI" onblur="QuitarBorde('VisaDateI')"/> 
+                    <label>au:</label>
+                    <input type="date" id="VisaDateF" onblur="QuitarBorde('VisaDateF')"/> 
+                </td>
+            </tr>  
+        </table>
+        <h3>D'AUTRE PART</h3><br>
+    </div>
+    <div>
+        <u>  
+            <h3 style="text-align: center;">IL A ETE CONVENU ET ARRÊTÉ CE QUI SUIT:</h3>
+            <H3 style="text-align: center;">ENGAGEMENT ET CONDITIONS DÉXECTION DU CONTRAT</H3>
+        </u>
+    <p>
+        L'entreprise <b><span  class="entrepriseClase"></span> </b> engage Monsieur <b><span class="marinClase"></span> </b> en calité de
+        <input type="text" id="caliteMarin" oninput="MostrarCaliteMarin()" onblur="QuitarBorde('caliteMarin')"/> embarqué en <input type="text" id="categorie" size="2"  maxlength="2" onblur="QuitarBorde('categorie')">éme categorie au sein du rôle collectif, sous réserve des résultats de la visite médicale effectuée auprés du médicin du service de santé ddes gens de mer.
+    </p>    
+    <p>
+        Le présent contrat est soumis aux dispositions du Code du Travail et du Code des Transports – cinquième partie : Transport et Navigation maritime.
+    </p>
+    <p>
+        En sa qualité de <b><span id="CaliteMarinMostrado"></span> </b> , Monsieur <b><span  class="marinClase"> </span> </b> exercera ses fonctions dans le cadre de la politique et des directives générales ou particulières que l’armateur aura pu définir. A ce titre, Monsieur <b><span  class="miClase"></span> </b> s'engage à accomplir toutes missions relevant de ses attributions et compétences.
+    </p>
+    <p>
+        Monsieur <b><span  class="marinClase"></span> </b> devra veiller à respecter rigoureusement les règles d’ordre, d’organisation et de sécurité à bord du navire et à entretenir le navire dans les meilleures conditions. Son comportement ne devra pas avoir pour effet de mettre en danger sa personne ou autrui.
+    </p>
+    <p>
+        L’armement exige que le marin respecte l’heure de départ du navire.
+    </p>
+    <p>
+        Il est expressément convenu entre les parties que les fonctions exercées ont nécessairement un caractère évolutif et/ou polyvalent.
+    </p>
+    <p>
+        Celles-ci pourront être précisées verbalement ou par notes de service au fur et à mesure des besoins de l'entreprise. Elles pourront faire l'objet de changements selon les nécessités inhérentes au bon fonctionnement et aux évolutions économiques, commerciales et techniques de l'entreprise.
+    </p>
+    <p> 
+        Monsieur <b><span  class="marinClase" ></span> </b> s'engage dès lors à accomplir toute formation qui lui serait demandée par l'entreprise.
+    </p>
+    <p>
+        Monsieur <b><span  class="marinClase"></span> </b>est tenu d'observer les dispositions réglementant les conditions de travail applicables à l'ensemble des salariés de l'entreprise ainsi que les règles générales concernant la discipline, l'hygiène et la sécurité du travail. L’armement rappelle au marin que le port du vêtement de flottaison individuel (VFI) et du casque est obligatoire sur le pont de travail, et aussi souvent que le patron du bord le jugera nécessaire (situation dangereuse, manœuvre, mauvais temps…).
+    </p> 
+</div>
+<div>
+        <h3>CONVENTION COLLECTIVE</h3>
+    <p>
+        Monsieur <b><span  class="marinClase"></span> </b> a connaissance de l’application de la convention collective de la Pêche professionnelle maritime au sein de l’entreprise <b><span class="entrepriseClase"> </span> </b> au jour de signature du présent contrat.
+    </p>
+    <p>
+        La présente mention ne saurait avoir de valeur contractuelle, la convention collective applicable étant déterminée en fonction de l’activité principale de l’entreprise.
+    </p>
+        <h3>DURÉE DU CONTRAT DE TRAVAIL</h3>
+     <p>  
+        Monsieur <b><span  class="marinClase"></span> </b> est engagé dans le cadre d’un contrat d’engagement maritime à durée déterminée afin d’aider l’entreprise <b><span  class="entrepriseClase"></span> </b> à faire face à un accroissement temporaire d’activité.
+    </p> 
+    <p>
+        Le contrat de Monsieur <b><span  class="marinClase"></span> </b> est conclu pour une mariée, soit approximativement du <input type="date" id="dateInitial" oninput="MostrarDateInitial()" onblur="QuitarBorde('dateInitial')"/> au <input type="date" id="dateFinal" oninput="MostrarDateFinal()" onblur="QuitarBorde('dateFinal')">
+    </p>
+    <p>     
+        Le contrat prendra automatiquement fin à l'échéance du terme. Toutefois, en cas de besoin, le présent engagement pourra éventuellement être renouvelé une fois par accord des parties, dans la limite de 12 mois d’embarquement effectif. Il sera alors établi un avenant au présent contrat.
+    </p>
+</div>
+<div>
+        <h3>PÉRIODE D’ESSAI</h3>
+     <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name ="dure" value="A"/> Au regard de sa durée, le présent contrat de travail ne comportera pas de période d’essai. <br>
+        
+        Ou <br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name ="dure" value="B"/>Ce contrat ne deviendra définitif qu'à l'issue d'une période d'essai de 2 mois.
+    </p>  
+    <p>
+        Cette période d'essai pourra être renouvelée une fois pour une durée de 2 mois, dans les conditions fixées par l’article L. 1221-21 du Code du travail, l’article L. 5542-15 du Code des transports et la convention collective de la Pêche professionnelle maritime, applicable dans l’entreprise.
+    </p>
+    <p> 
+        Durant cette période, chacune des parties pourra rompre le contrat sans indemnité et en respectant un délai de préavis conformément aux dispositions légales.
+    </p>      
+        Ne sont décomptées dans la durée de la période d’essai que les périodes de travail à bord du navire, dite d’embarquement effectif du marin.
+    <p>   
+        Toute rupture de période d'essai, quel qu'en soit l'auteur, sera notifiée par écrit remis en main propre contre récépissé ou par lettre adressée en recommandé avec accusé de réception.
+    </p>  
+</div>
+<div>
+        <h3>DURÉE DU TRAVAIL</h3>
+     <p>  
+        Monsieur <b><span  class="marinClase"></span> </b> est conclu pour une mariée, soit approximativement du <b><span  class="marinDateClaseI"></span> </b> au <b><span  class="marinDateClaseF"></span> </b>
+        travaillera à temps complet sur la base d’une durée annuelle de travail de 225 jours, y compris les heures de travail effectuées à terre.
+    </p> 
+    <p>  
+        L’éventuel travail à terre sera pris en compte forfaitairment pour la détermination du nombre de jours de mer annuel du marin sur la base : <br>    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -	D’un ½ jour de mer pour une durée de travail à terre inférieure à 4 heures de travaillées consécutive ou non par jour ; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -	D’un jour de mer pour une durée de travail à terre comprise entre 4 et 8 heures travaillées consécutives ou non par jour. <br>
+    </p> 
+</div>
+<div>   
+        <h3>RÉMUNERATION</h3> 
+     <p> 
+        La rémunération du marin, même dans le système de rémunération à la part, ne peut être inférieure au SMIC.
+    </p>      
+    <p>  
+        Indépendamment de la délivrance d’un bulletin de salaire, l’armateur s’engage à transmettre au salarié les éléments comptables justifiant la rémunération perçue selon les modalités suivantes :
+    </p> 
+    <p>    
+          1) Á la quinzaine en fonction du partage et versement aux divers organismes.
+    </p>
+    <p>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Ventes nettes = Ventes Brutes – Frais Communs + Divers</b>
+    </p> 
+    <p> 
+       
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>1. Ventes Brutes:</b> Ventes sous criée + Ventes directes et sous contrats <br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>2. Frais Communs</b> prélevés sur les ventes brutes dans le respect des dispositions d’ordre public.<br>
+    </p> 
+    <p style="padding-left: 40px;">
+        <i>
+            NB : Les charges sociales salariales et patronales, indemnités de licenciement, amendes, cotisations syndicales, 
+            cotisations à la Caisse “Chômage Intempéries”, taxes d’apprentissage et de formation continue, contributions aux congés de formation, assurance sur les salaires, ne peuvent en aucun cas faire partie des frais communs.
+        </i>
+        <br>
+     </p>   
+        
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>3. Divers </b><br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Indemnités remorquage - Aides FIOM + O.P. - Ristourne sur achat  <br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Ventes diverses	effectués sur frais communs  <br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Taxes ports et criée  <br>
+             
+     <p>
+        2)	Répartition des parts sur les Ventes nettes<br>
+            
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#8226 EQUIPAGE	<input type="text" id="Equipage"size="2" maxlength="2" onblur="QuitarBorde('Equipage')"> % <br> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#8226 ARMEMENT	<input type="text" id="Armement"  size="2" maxlength="2" onblur="QuitarBorde('Armement')"> %  <br>
+    </p>  
+    <p>  
+        Le <input type="text" id="Beneficiere" onblur="QuitarBorde('Beneficiere')"> bénéficiera de <input type="text" id="Parts"  size="2" maxlength="2" onblur="QuitarBorde('Parts')"> part(s) sur la part Equipage.<br>
+    </p>
+</div>
+<div>     
+        <h3>LIEU DE TRAVAIL</h3>
+    <p>
+        Monsieur <b><span class="marinClase"></span> </b> est conclu pour une mariée, soit approximativement du <b><span  class="marinDateClaseI"></span> </b> au <b><span  class="marinDateClaseF"></span> </b>
+        exercera principalement ses fonctions sur le navire <b><span id="NombreNaviereMostrado" class="entrepriseClase"></span> </b> battant pavillon français, dont le port d’attache et le lieu de maintenance sont situés à <input type="text" id="Situesa" onblur="QuitarBorde('Situesa')">.
+    </p>
+</div>  
+<div>   
+        <h3>Clause de mobilité</h3>
+        
+        <h3>REPOS QUOTIDIEN ET HEBDOMADAIRE</h3>
+    <p>
+        Conformément aux articles L 5544-16 et L 5544-17 du Code des Transports, les repos de Monsieur <b><span class="marinClase"></span> </b> est conclu pour une mariée, soit approximativement du <b><span  class="marinDateClaseI"></span> </b> au <b><span class="marinDateClaseF"></span> </b>
+        seront : <br>
+    <p style="padding-left: 40px;">
+        - D'une durée minimale du repos quotidien de 10 heures par période de 24 heures. <br>
+        - Une journée de repos hebdomadaire de 24 heures consécutives comptée à partir de l'heure normale où le marin doit prendre son service. <br>
+    </p> 
+    </p>
+</div> 
+<div>     
+        <h3>CONGÉS PAYÉS</h3>
+     <p> 
+        Les congés payés seront calculés à raison de 3 jours par mois de travail effectif (Article L. 5544-23 du Code des Transports).
+    </p> 
+    <p>   
+        La période de ces congés sera déterminée par accord entre l’armateur et Monsieur <b><span  class="marinClase"></span> </b>, compte tenu des nécessités du service.
+    </p> 
+</div> 
+        <h3>AVANTAGES SOCIAUX</h3>
+    <p>
+        Monsieur <b><span  class="marinClase"></span> </b> est conclu pour une mariée, soit approximativement du <b><span  class="marinDateClaseI"></span> </b> au <b><span class="marinDateClaseF"></span> </b>
+    </p>  
+    <p> 
+        Les cotisations de sécurité sociale seront décomptées sur la base d’un salaire forfaitaire défini en fonction des catégories fixées par la réglementation en vigueur.
+    </p>  
+    <p>   
+        En sa qualité de marin, Monsieur <b><span  class="marinClase"></span> </b> est conclu pour une mariée, soit approximativement du <b><span  class="marinDateClaseI"></span> </b> au <b><span class="marinDateClaseF"></span> </b>
+        sera affilié à : l’ENIM – Quai Solidor – 35400 SAINT MALO.
+    </p>  
+    <p>   
+        Pour les frais de santé : INIZYS – 68 Quai de l’Odet – 29000 QUIMPER.
+    </p>  
+    <p>   
+        Monsieur <b><span  class="marinClase"></span> </b> est conclu pour une mariée, soit approximativement du <b><span  class="marinDateClaseI"></span> </b> au <b><span  class="marinDateClaseF"></span> </b>
+        ne saurait se soustraire au bénéfice des prestations ni refuser d’acquitter la quote-part mise à sa charge, telles que ces prestations et cotisations sont actuellement prévues ou telles qu’elles sont susceptibles pour le futur de résulter de modifications des régimes en cours.
+    </p>  
+    <p>   
+        Les régimes ci-dessus pouvant être modifiés ou dénoncés, les présentes mentions ne sont données qu’à titre informatif et ne valent pas contractualisation.
+    </p>  
+    </div>   
+    <div>
+        <h3>OBLIGATIONS PROFESSIONNELLES PARTICULIERES </h3>
+        <p>    
+            <b>- Secret et discrétion professionnels</b><br>
+            <p style="padding-left: 40px;">
+                Monsieur <b><span class="marinClase"></span> </b> devra conserver pendant et après l'exécution du présent contrat une discrétion et un secret professionnel absolus en ce qui concerne toutes les informations dont il serait amené à prendre connaissance à l'occasion de l'exercice de ses fonctions. Ainsi, Monsieur <b><span class="marinClase"></span> </b> s'interdit de divulguer à qui que ce soit des informations concernant l’armement, ses savoir-faire et méthodes et/ou la clientèle de ce dernier. Ces obligations de confidentialité, de discrétion et de secret professionnel continueront à s'appliquer postérieurement à la cessation des fonctions de Monsieur <b><span id="NombreMarinMostrado32" class="marinClase"></span> </b>, quelle qu'en soit la cause.
+            </p>
+        </p>
+        <p>
+            <b>- Entretien – Restitution de matériel</b><br>
+        <p style="padding-left: 40px;">
+                Les biens de toute nature qui pourraient être remis à Monsieur <b><span  class="marinClase"></span> </b>, le sont à titre précaire. Ils demeurent la propriété de l'entreprise. Monsieur <b><span  class="marinClase"></span> </b> est responsable de leur maintien en bon état et ne peut ni les céder, ni les louer à des tiers.
+                En cas de rupture ou de suspension du présent contrat, quelle qu'en soit la cause, Monsieur <b><span  class="marinClase"></span> </b> devra les restituer sans délai.
+        </p>
+        </p>
+        <p>
+            <b>- Embarquement de marchandises pour son propre compte</b><br>
+            <p style="padding-left: 40px;">   
+                Conformément aux dispositions du Code des transports, Monsieur <b><span  class="marinClase"></span> </b> s’engage à ne pas charger à bord de marchandises pour son propre compte.
+        </p>
+        <p>
+             <b>- Consommations</b><br>
+             <p style="padding-left: 40px;">
+                Il est interdit à Monsieur <b><span  class="marinClase"></span> </b> de pénétrer ou de demeurer à bord du navire en état d'ivresse ou sous l'emprise de la drogue. Dans ce cadre, il est également interdit d’embarquer des substances illicites à bord.
+                La godaille est strictement interdite.
+            </p>
+        </p>
+        <p>
+            <b>- Absence – Accident</b>
+        <p style="padding-left: 40px;">
+                Toute absence prévisible doit faire l'objet d'une autorisation de l’armateur. 
+                En cas d'absence, Monsieur <b><span class="marinClase"></span> </b> en informera l’armateur le plus rapidement possible, afin que toute disposition utile puisse être prise. Il justifiera de son absence et des prolongations de celle-ci conformément aux dispositions légales et/ou conventionnelles.
+                Sauf empêchement légitime dûment justifié, le défaut d'information de l'armateur dans un délai de 48 heures sera constitutif d'une faute.
+                Monsieur <b><span  class="marinClase"></span> </b> s'engage expressément à informer l’armateur de la date prévisible de son retour afin que l’entreprise puisse effectuer les démarches éventuellement nécessaires.
+        <p>
+            <b>- Changement de situation</b>
+            <p style="padding-left: 40px;">
+                Monsieur <b><span class="marinClase"></span> </b> s'engage à faire connaître sans délai tout changement de situation le concernant (domicile, situation familiale, enfants à charge) et susceptible d'avoir une incidence sur la gestion administrative de son dossier.
+            </p>
+        </p>
+        <p>
+            <b>- Suivi médical</b>
+        <p style="padding-left: 40px;">
+                Monsieur <b><span class="marinClase"></span> </b> s'engage à se soumettre à la visite d’aptitude à la navigation et au suivi médical périodique organisés par le service de santé des gens de mer.
+                Tout manquement à l'une de ces obligations pourra faire l'objet d'une sanction disciplinaire.
+        </p> 
+        </p>
+        <p>
+            <b>- Cumul d’emplois</b> <br>
+        <p style="padding-left: 40px;">
+                En cas de cumul d’emplois, Monsieur <b><span class="marinClase"></span> </b> s'engage à prévenir au préalable l’armateur et à respecter impérativement les durées maximales de travail et minimum de repos.
+        </p>
+        </p> 
+</div>
+<div>
+        <h3>RUPTURE DU CONTRAT D’ENGAGEMENT MARITIME</h3>
+    <p>   
+        Le présent contrat pourra être résilié avant le terme convenu, en cas d'accord des parties ou en cas d'inaptitude médicalement constatée, de faute grave, lourde ou de force majeure ou enfin si Monsieur <b><span class="marinClase"></span> </b> peut justifier de la conclusion d'un contrat de travail à durée indéterminée.
+    </p>
+    <p>   
+        Dans ce dernier cas, Monsieur <b><span  class="marinClase"></span> </b> devra respecter un délai de prévenance conformément aux dispositions légales.
+    </p>   
+        <h3>DROIT AU RAPATRIEMENT</h3>
+     <p>  
+        Conformément aux dispositions des articles L.5542-29 et suivants du Code des transports, l’employeur organisera le rapatriement du marin dans les cas de figure visés ci-dessous : <br>
+    <p style="padding-left: 40px;">  
+        - Quand le contrat à durée déterminée ou au voyage prend fin dans un port non métropolitain ;<br>
+        - A la fin de la période de préavis prévue par l'article L. 5542-4 ;<br>
+        - En cas de licenciement ou de débarquement pour motif disciplinaire ;<br>
+        - En cas de maladie, d'accident ou pour toute autre raison d'ordre médical nécessitant son débarquement ;<br>
+        - En cas de naufrage ;<br>
+        - Quand l'armateur n'est plus en mesure de remplir ses obligations légales ou contractuelles d'employeur pour cause d'ouverture d'une procédure collective, changement d'immatriculation, vente du navire ou toute autre raison analogue ; <br>
+        - En cas de suspension ou de cessation de l'emploi ;<br>   
+        - A l'issue d'une période d'embarquement maximale de six mois, qui peut être portée à neuf mois par accord collectif. Cette période peut être prolongée ou réduite d'un mois au plus pour des motifs liés à l'exploitation commerciale du navire ; <br>
+        - Quand le navire fait route vers une zone de conflit armé où le marin n'accepte pas de se rendre.<br>
+    </p> 
+    </p>
+</div>  
+<div>  
+       <h3>FORMALITES DÉCLARATIVES/INFORMATION SUR LA PROTECTION DES DONNÉES (RGPD)</h3> 
+     <p> 
+        Afin de satisfaire à ses obligations déclaratives, gérer ses ressources humaines et procéder au traitement des rémunérations, l’entreprise <b><span class="entrepriseClase"></span> </b> transmet des données personnelles concernant Monsieur <b><span  class="marinClase"></span> </b> à l’occasion de la conclusion, l’exécution et la rupture de son contrat de travail.
+    </p> 
+    <p>    
+        La signature du présent contrat vaut autorisation pour l’entreprise <b><span  class="entrepriseClase"></span> </b> de collecter, d’enregistrer et de stocker les données nécessaires.
+    </p>  
+     <p>  
+        Outre les services internes de l’établissement, les destinataires d’informations nominatives concernant Monsieur <b><span  class="marinClase"></span> </b> sont : <br>
+    <p style="padding-left: 40px;">    
+        - Les organismes sociaux : URSSAF et ENIM. Chaque mois, ainsi qu’à chaque événement (arrêt de travail, fin de contrat de travail), le dispositif de la Déclaration Sociale Nominative (DSN) permet le transfert de toutes les informations sociales nécessaires à l’exercice des droits du salarié ; <br>
+        - Les caisses de retraite et de prévoyance ; <br>
+        - Les services des impôts ;<br>
+        - Les services de santé au travail des gens de mer ;<br>
+        - Le cabinet comptable pour la gestion de la paie. <br>
+    </p>
+    </p> 
+        <p>  
+        Ces informations sont réservées à l’usage des services concernés et ne peuvent être communiquées qu’à ces destinataires. Il est précisé que, dans le cadre de l’exécution de leurs prestations, les tiers n’ont qu’un accès limité aux données et ont l’obligation de les utiliser en conformité avec les dispositions de la législation applicable en matière de protection des données personnelles.
+        Elles seront conservées aussi longtemps que nécessaire à l’exécution du présent contrat, à l’accomplissement par l’entreprise <b><span  class="entrepriseClase"></span> </b> de ses obligations légales et réglementaires ainsi qu’à l’exercice de prérogatives lui étant reconnues par la loi et la jurisprudence.
+    </p> 
+        <p>  
+        Conformément à la règlementation applicable, Monsieur <b><span class="marinClase"></span> </b> bénéficie d’un droit d’accès, de rectification, d’opposition, de limitation du traitement, d’effacement et de portabilité des informations qu’il peut exercer en adressant directement une demande auprès de la Direction par courrier. Il est possible également de définir des directives relatives à la conservation, à l’effacement et à la communication de ces données après le décès du salarié.
+    </p>  
+        <p>   
+        En cas de difficulté en lien avec la gestion de ses données personnelles, Monsieur <b><span class="marinClase"></span> </b> peut adresser une réclamation auprès du délégué à la protection des données personnelles ou auprès de la CNIL ou de toute autre autorité compétente.
+    </p> 
+</div>  
+<div>
+        <br>
+        Fait à <input type="text" id="Faita" onblur="QuitarBorde('Faita')">, le <input type="date" id="fecha" onblur="QuitarBorde('fecha')">, <br><br>
+        
+        <br>
+        En double exemplaire, dont un pour chacune des parties, <br>
+        <br>
+        <table>
+            <tr></tr>
+            <tr>
+                <td style="width: 150px;"></td>
+                <td align="center" style="width: 400px;">
+                    Signature du salarié (*)
+                </td>
+                <td style="width: 50px;"></td>
+                
+                <td align="center" style="width: 400px;">
+                    Pour la société (*) <b><span  class="entrepriseClase"></span> </b> 
+                </td>
+                
+            </tr>
+            <tr style="height: 100px;"></tr>
+            <tr>
+                <td style="width: 150px;"></td>
+                <td align="center" style="width: 400px;">
+                    Monsieur <b><span class="marinClase"></span> </b>
+                </td>
+                <td style="width: 50px;"></td>
+                
+                <td align="center" style="width: 400px;">
+                    Monsieur ou Madame  <b><span  id ="representantMostrado" ></b>
+                </td>
+            </tr>
+                
+
+        </table>                  
+        <br><br>
+        Parapher les pages précédentes. <br><br><br>
+        (*) Précéder la signature par la mention manuscrite "Lu et Approuvé, Bon pour Accord". <br>  
+    </p>
+</div>  
+<br><br>
+    <input type="button" class="mibutton" value="IMPRIMIR / PDF" id= "btimprimir" onclick="imprimir()">
+   
+    <script src="scriptcontrato.js">       
+          
+    </script>
+    
+</body>
+</html>
